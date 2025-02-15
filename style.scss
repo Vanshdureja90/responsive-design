@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Parkinsans:wght@300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0 1rem;
+  font-family: "Open Sans", serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+nav .logo img {
+  cursor: pointer;
+  width: 15vw;
+  aspect-ratio: 1/1;
+}
+nav .nav-bar li {
+  display: none;
+}
+nav .search-div {
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+}
+nav .search-div .search-icon img {
+  cursor: pointer;
+  width: 6vw;
+}
+nav .search-div button {
+  cursor: pointer;
+  padding: 0.5rem 0.7rem;
+  border-radius: 2vh;
+  background-color: black;
+  color: white;
+  font-size: 1.1rem;
+}
+nav .search-div .menu-icon img {
+  cursor: pointer;
+  width: 6vw;
+}
+
+.section-1 .top {
+  margin-top: 1vh;
+}
+.section-1 .top h1 {
+  font-size: 2rem;
+  line-height: 1;
+}
+.section-1 .bottom {
+  display: grid;
+  place-items: center;
+  gap: 1vh;
+  margin-top: 2vh;
+  grid-template-areas: "a a b b" "a a b b" "a a b b" "a a b b" "a a b b" "a a c c" "a a c c" "a a c c";
+}
+.section-1 .bottom img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 44vw;
+  height: 100%;
+  border-radius: 0.8vh;
+}
+.section-1 .bottom .img-1 {
+  grid-area: a;
+}
+.section-1 .bottom .img-2 {
+  grid-area: b;
+}
+.section-1 .bottom .img-3 {
+  grid-area: c;
+}
+
+.section-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.section-2 h1 {
+  font-size: 2rem;
+  margin-top: 2vh;
+}
+.section-2 .marquee {
+  display: flex;
+  width: 80vw;
+  overflow: hidden;
+  margin-top: 2vh;
+}
+.section-2 .marquee .text {
+  display: flex;
+  animation: marq 20s linear infinite both;
+}
+.section-2 .marquee .text p {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border: 1px solid black;
+  margin-right: 5vh;
+  border-radius: 5vh;
+}
+.section-2 .trip {
+  margin-top: 5vh;
+}
+.section-2 .trip button {
+  padding: 1rem 2rem;
+  background-color: gray;
+  color: white;
+  font-size: 1.3rem;
+  border-radius: 1vh;
+  cursor: pointer;
+}
+
+@keyframes marq {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.section-3 .scroll-image {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  overflow: scroll;
+  gap: 40vw;
+  margin: 2.5rem;
+}
+.section-3 .scroll-image img {
+  width: 80vw;
+}
+
+.section-4 h1 {
+  font-size: 3rem;
+}
+.section-4 .section-4-top {
+  display: flex;
+  justify-content: space-between;
+}
+.section-4 .sub {
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  border-radius: 2vh;
+  background-color: black;
+  cursor: pointer;
+  color: white;
+  display: none;
+}
+.section-4 .bottom {
+  display: flex;
+  flex-direction: column;
+}
+.section-4 .bottom div {
+  display: flex;
+  margin: 1rem 0;
+}
+.section-4 .bottom div img {
+  width: 40vw;
+  height: 25vw;
+}
+.section-4 .bottom div .bottom-inside {
+  display: flex;
+  font-size: 1rem;
+  flex-direction: column;
+  margin: 0 2rem;
+}
+.section-4 .bottom div .bottom-inside button {
+  font-size: 1.1rem;
+  margin-top: 0.4rem;
+  background-color: rgb(66, 64, 64);
+  color: white;
+  padding: 0.4rem 0;
+}
+
+.section-5 {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-5 h1 {
+  text-align: center;
+  font-size: 1.7rem;
+}
+.section-5 input, .section-5 button {
+  padding: 0.5rem 1rem;
+  margin: 0.6rem 0;
+}
+.section-5 p {
+  font-family: 0.8rem;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 4vh;
+}
+
+@media (min-width: 600px) {
+  .section-1 .bottom img {
+    width: 47vw;
+  }
+  .section-3 .scroll-image {
+    gap: 15vw;
+  }
+  .section-3 .scroll-image img {
+    width: 30vw;
+  }
+}
+@media (min-width: 1020px) {
+  body {
+    padding: 0 2rem;
+  }
+  nav .logo img {
+    width: 5vw;
+    aspect-ratio: 1/1;
+  }
+  nav .nav-bar {
+    align-items: center;
+    display: flex;
+  }
+  nav .nav-bar ul {
+    display: flex;
+  }
+  nav .nav-bar li {
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    display: block;
+    cursor: pointer;
+  }
+  nav .search-div {
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+  }
+  nav .search-div .search-icon img {
+    width: 2vw;
+  }
+  nav .search-div button {
+    padding: 0.5rem 0.7rem;
+    border-radius: 2vh;
+    background-color: black;
+    color: white;
+    font-size: 1.1rem;
+  }
+  nav .search-div .menu-icon img {
+    width: 2vw;
+  }
+  .section-1 {
+    display: flex;
+  }
+  .section-1 .top {
+    width: 50vw;
+  }
+  .section-1 .top h1 {
+    font-size: 5rem;
+  }
+  .section-1 .top p {
+    font-size: 1.3rem;
+  }
+  .section-1 .bottom {
+    width: 50vw;
+  }
+  .section-1 .bottom img {
+    width: 22vw;
+  }
+  .section-2 .marquee {
+    width: 60vw;
+  }
+  .section-3 .scroll-image {
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    overflow: hidden;
+    gap: 2vw;
+  }
+  .section-3 .scroll-image img {
+    height: 30vh;
+    width: 20vw;
+  }
+  .section-4 .sub {
+    display: block;
+  }
+  .section-4 .bottom {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+  .section-4 .bottom div img {
+    width: 20vw;
+    height: 20vw;
+  }
+}/*# sourceMappingURL=style.css.map */
